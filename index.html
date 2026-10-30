@@ -545,7 +545,7 @@
 
     function prepararLinkWhatsApp(){
       const destino = onlyDigits(WHATSAPP_ATENDIMENTO);
-      const mensagem = 'Olá, gostaria de continuar meu atendimento para negociação de dívidas. Meu CPF é ' + formatCPF(clienteValidado.cpf) + '.';
+      const mensagem = 'Olá, gostaria de continuar meu atendimento para negociação de dívidas.';
       finalWhatsAppBtn.href = destino.length >= 12
         ? 'https://wa.me/' + destino + '?text=' + encodeURIComponent(mensagem)
         : 'https://wa.me/?text=' + encodeURIComponent(mensagem);
@@ -715,7 +715,7 @@
     secondCopyOption.addEventListener('click', ()=>{
       if(!clienteValidado) return;
       const destino = onlyDigits(WHATSAPP_ATENDIMENTO);
-      const mensagem = 'Olá, gostaria de solicitar a segunda via para pagamento. Meu CPF é ' + formatCPF(clienteValidado.cpf) + '.';
+      const mensagem = 'Olá, gostaria de solicitar a segunda via para pagamento.';
       const link = destino.length >= 12
         ? 'https://wa.me/' + destino + '?text=' + encodeURIComponent(mensagem)
         : 'https://wa.me/?text=' + encodeURIComponent(mensagem);
