@@ -183,6 +183,14 @@
     .itapeva-whatsapp-float:hover { transform:scale(1.08); box-shadow:0 9px 25px rgba(0,0,0,.3); }
     .itapeva-whatsapp-float svg { width:36px; height:36px; fill:currentColor; }
     @media(max-width:470px) { .itapeva-whatsapp-float { right:16px; bottom:16px; width:56px; height:56px; } }
+
+    /* Página simplificada: atendimento exclusivamente pelo WhatsApp flutuante. */
+    .brand, .card { display:none !important; }
+    header { justify-content:flex-end; }
+    main { grid-template-columns:1fr; width:min(760px,90vw); text-align:center; }
+    .hero { width:100%; }
+    .hero h1, .hero p { margin-left:auto; margin-right:auto; }
+    .benefits { justify-content:center; }
   </style>
 </head>
 <body>
@@ -197,15 +205,15 @@
         <section class="hero">
           <div class="eyebrow">Negociação simples e segura</div>
           <h1>Uma nova chance para <span>organizar sua vida financeira.</span></h1>
-          <p>Consulte suas condições de negociação de forma rápida. Para começar, informe seu CPF e confirme sua data de nascimento.</p>
+          <p>Fale com nossa equipe pelo WhatsApp para conhecer as opções disponíveis e continuar seu atendimento.</p>
           <div class="benefits">
-            <div class="benefit"><span class="check">✓</span>Consulta rápida</div>
-            <div class="benefit"><span class="check">✓</span>Validação de identidade</div>
+            <div class="benefit"><span class="check">✓</span>Atendimento pelo WhatsApp</div>
+            <div class="benefit"><span class="check">✓</span>Contato direto com nossa equipe</div>
             <div class="benefit"><span class="check">✓</span>Processo simplificado</div>
           </div>
         </section>
 
-        <section class="card">
+        <section class="card" hidden aria-hidden="true">
           <h2>Consulte suas condições</h2>
           <div class="subtitle">Preencha seus dados para confirmar sua identidade e continuar.</div>
 
@@ -284,13 +292,13 @@
     <section class="section">
       <div class="section-title">
         <small>Como funciona</small>
-        <h3>Consulte de forma simples e segura</h3>
-        <p>Você informa seus dados, confirmamos sua identidade e então podemos apresentar as próximas opções disponíveis para o atendimento.</p>
+        <h3>Atendimento simples e direto</h3>
+        <p>Clique no botão flutuante do WhatsApp para falar com nossa equipe e conhecer as opções disponíveis.</p>
       </div>
       <div class="steps">
-        <article class="step"><div class="number">1</div><h4>Informe seu CPF</h4><p>O CPF é validado antes de prosseguir para evitar erros de digitação e consultas incorretas.</p></article>
-        <article class="step"><div class="number">2</div><h4>Confirme seu nascimento</h4><p>A data informada é comparada com o cadastro retornado pela consulta para confirmar sua identidade.</p></article>
-        <article class="step"><div class="number">3</div><h4>Continue o atendimento</h4><p>Após a confirmação dos dados, o sistema libera a próxima etapa do processo de negociação.</p></article>
+        <article class="step"><div class="number">1</div><h4>Clique no WhatsApp</h4><p>Use o botão verde flutuante disponível no canto da página.</p></article>
+        <article class="step"><div class="number">2</div><h4>Fale com nossa equipe</h4><p>Envie sua mensagem e explique como podemos ajudar no atendimento.</p></article>
+        <article class="step"><div class="number">3</div><h4>Conheça as opções</h4><p>Nossa equipe orientará você sobre os próximos passos disponíveis.</p></article>
       </div>
     </section>
 
@@ -374,9 +382,9 @@
         <h3>Antes de continuar</h3>
       </div>
       <div class="faq">
-        <details><summary>Por que preciso informar minha data de nascimento?</summary><p>Ela é utilizada como uma segunda informação para confirmar que o CPF consultado pertence à pessoa que está realizando o atendimento.</p></details>
-        <details><summary>O que acontece se a data não conferir?</summary><p>A validação é recusada e nenhum dado cadastral adicional é apresentado na página.</p></details>
-        <details><summary>Minha chave de consulta fica no HTML?</summary><p>Não. Nesta versão, a página chama um intermediário seguro no servidor, e é esse servidor que possui a credencial para consultar a API.</p></details>
+        <details><summary>Como inicio meu atendimento?</summary><p>Clique no botão verde do WhatsApp disponível no canto da página para falar com nossa equipe.</p></details>
+        <details><summary>O atendimento é feito pelo WhatsApp?</summary><p>Sim. A equipe dará continuidade ao atendimento diretamente pelo canal indicado no botão flutuante.</p></details>
+        <details><summary>Preciso informar dados nesta página?</summary><p>Não. Esta página não solicita CPF, data de nascimento, telefone ou e-mail.</p></details>
       </div>
     </section>
 
